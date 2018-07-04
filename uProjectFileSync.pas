@@ -83,6 +83,9 @@ type
     actCancel: TAction;
     Button1: TButton;
     Splitter2: TSplitter;
+    Panel6: TPanel;
+    Button2: TButton;
+    Button3: TButton;
     procedure actPushExecute(Sender: TObject);
     procedure actPushUpdate(Sender: TObject);
     procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel; const Rect: TRect);
@@ -154,7 +157,11 @@ begin
     begin
       if FFileListBox.Selected[i] then
       begin
+
         sFilePath := FFileListBox.Items[i];
+        if sFilePath = '[..]' then
+          Continue;
+          
         if isFolder(sFilePath) then
           sFilePath := FolderPath(sFilePath) else
           sFilePath := FFileListBox.Directory + '\' + sFilePath;
@@ -173,8 +180,7 @@ end;
 
 procedure TProjectFileSync.actPushUpdate(Sender: TObject);
 begin
-  actPush.Enabled := (FFileListBox.ItemIndex <> -1) and
-    (FFileListBox.Items[FFileListBox.ItemIndex] <> '[..]')
+  actPush.Enabled := FFileListBox.SelCount > 0;
 end;
 
 constructor TProjectFileSync.Create(AOwner: TComponent);

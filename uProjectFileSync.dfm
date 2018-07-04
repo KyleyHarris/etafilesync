@@ -38,7 +38,6 @@ object ProjectFileSync: TProjectFileSync
           Text = 'Progress File'
           Width = 50
         end>
-      ExplicitLeft = 0
     end
     object lbUploadLog: TListBox
       Left = 1
@@ -48,10 +47,6 @@ object ProjectFileSync: TProjectFileSync
       Align = alClient
       ItemHeight = 13
       TabOrder = 1
-      ExplicitLeft = 64
-      ExplicitTop = 6
-      ExplicitWidth = 121
-      ExplicitHeight = 97
     end
     object Button1: TButton
       Left = 5
@@ -63,17 +58,15 @@ object ProjectFileSync: TProjectFileSync
     end
   end
   object Panel2: TPanel
-    Left = 0
+    Left = 92
     Top = 0
-    Width = 953
+    Width = 861
     Height = 269
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 1
-    ExplicitLeft = 752
-    ExplicitTop = 264
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitLeft = 0
+    ExplicitWidth = 953
     object Splitter1: TSplitter
       Left = 473
       Top = 1
@@ -90,7 +83,6 @@ object ProjectFileSync: TProjectFileSync
       Align = alLeft
       Caption = 'pLocalFiles'
       TabOrder = 0
-      ExplicitHeight = 357
       object Panel3: TPanel
         Left = 1
         Top = 1
@@ -98,9 +90,6 @@ object ProjectFileSync: TProjectFileSync
         Height = 41
         Align = alTop
         TabOrder = 0
-        ExplicitLeft = 96
-        ExplicitTop = 32
-        ExplicitWidth = 185
         object Label1: TLabel
           Left = 8
           Top = 4
@@ -130,25 +119,20 @@ object ProjectFileSync: TProjectFileSync
     object Panel4: TPanel
       Left = 476
       Top = 1
-      Width = 476
+      Width = 384
       Height = 267
       Align = alClient
       Caption = 'Panel4'
       TabOrder = 1
-      ExplicitLeft = 600
-      ExplicitTop = 104
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitWidth = 476
       object Panel5: TPanel
         Left = 1
         Top = 1
-        Width = 474
+        Width = 382
         Height = 41
         Align = alTop
         TabOrder = 0
-        ExplicitLeft = 168
-        ExplicitTop = 120
-        ExplicitWidth = 185
+        ExplicitWidth = 474
         object Label2: TLabel
           Left = 5
           Top = 4
@@ -177,16 +161,37 @@ object ProjectFileSync: TProjectFileSync
       object RemoteList: TListBox
         Left = 1
         Top = 42
-        Width = 474
+        Width = 382
         Height = 224
         Align = alClient
         ItemHeight = 13
         TabOrder = 1
-        ExplicitLeft = 272
-        ExplicitTop = 152
-        ExplicitWidth = 121
-        ExplicitHeight = 97
+        ExplicitWidth = 474
       end
+    end
+  end
+  object Panel6: TPanel
+    Left = 0
+    Top = 0
+    Width = 92
+    Height = 269
+    Align = alLeft
+    TabOrder = 2
+    object Button2: TButton
+      Left = 8
+      Top = 16
+      Width = 75
+      Height = 25
+      Action = actPush
+      TabOrder = 0
+    end
+    object Button3: TButton
+      Left = 8
+      Top = 48
+      Width = 75
+      Height = 25
+      Action = actCancel
+      TabOrder = 1
     end
   end
   object PopupMenu1: TPopupMenu
